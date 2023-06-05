@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Oppgave 3</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: Arial, sans-serif;
+        }
+
+        .registration-container {
+            padding: 20px;
+            background-color: #f2f2f2;
+            border-radius: 5px;
+        }
+
+        .registration-input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+
+        .registration-button {
+            background-color: #2c3ec7;
+            color: white;
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="registration-container">
+        <h2>Registrering</h2>
+        
+            <input id="fname" type="text" class="registration-input" placeholder="Fornavn" required>
+            <input id="lname" type="text" class="registration-input" placeholder="Etternavn" required>
+            <input id="address" type="text" class="registration-input" placeholder="Adresse" required>
+            <input id="zip" type="text" class="registration-input" placeholder="Postnummer" required>
+            <input id="city" type="text" class="registration-input" placeholder="Poststed" required>
+            <input id="email" type="email" class="registration-input" placeholder="E-post" required>
+            <input id="password" type="password" class="registration-input" placeholder="Passord" required>
+            
+               
+            <div class="signUpBox">
+                <button id="btnCreate" onclick="signUp()" class="registration-button">Opprett bruker</button>
+            </div>
+        
+    </div>
+
+    
+    <script src="https://www.gstatic.com/firebasejs/9.6.3/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.3/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.3/firebase-firestore-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.3/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.3/firebase-firestore-compat.js"></script>
+    <script src="register.js"></script>
+
+
+</body>
+
+</html>
